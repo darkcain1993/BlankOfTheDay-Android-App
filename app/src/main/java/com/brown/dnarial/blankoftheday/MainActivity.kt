@@ -113,32 +113,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        ///////////This section is for the notifications the app will use while not closed///////////////////////
-
-
-        // This function will be used to create a notification channel when the app is first used and still in use (background)
-        // It will only be called when the user creates an account (it will function after every use afterwards????)
-        /*
-        val channelid = "newUploads"
-        fun createNotificationChannel() {
-            // Create the NotificationChannel, but only on API 26+ because
-            // the NotificationChannel class is new and not in the support library
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                var name:CharSequence = "Main Channel"
-                var description = "This channel lets users know that new content has been uploaded."
-                var importance = NotificationManager.IMPORTANCE_DEFAULT
-                var channel = NotificationChannel(channelid, name, importance);
-                channel.setDescription(description);
-                channel.enableVibration(true)
-                channel.enableLights(true)
-                // Register the channel with the system; you can't change the importance
-                // or other notification behaviors after this
-                var notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-                notificationManager.createNotificationChannel(channel)
-            }
-        }
-
-*/
+        
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         // This section is for creating an account and logging in/////////
@@ -238,36 +213,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        fun sendEmailVerification() {
-            // Disable button
-            //findViewById<Button>(R.id.verifyButton).isEnabled = false
-
-            // Send verification email
-            // [START send_email_verification]
-            val user: FirebaseUser? = mAuth!!.currentUser
-            user!!.sendEmailVerification()
-                    .addOnCompleteListener(this, OnCompleteListener<Void> {
-                        @Override
-                        fun onComplete(@NonNull task: Task<Void>) {
-                            // [START_EXCLUDE]
-                            // Re-enable button
-                            //findViewById<Button>(R.id.verifyButton).isEnabled = true
-
-                            if (task.isSuccessful) {
-                                Toast.makeText(this,
-                                        "Verification email sent to " + user.email,
-                                        Toast.LENGTH_SHORT).show();
-                            } else {
-                                Log.e("TAG", "sendEmailVerification", task.exception);
-                                Toast.makeText(this,
-                                        "Failed to send verification email.",
-                                        Toast.LENGTH_SHORT).show();
-                            }
-                            // [END_EXCLUDE]
-                        }
-                    });
-            // [END send_email_verification]
-        }
+        
 
         // this will allow a user to sign in with a created account
         fun signIn(email:String, password:String) {
