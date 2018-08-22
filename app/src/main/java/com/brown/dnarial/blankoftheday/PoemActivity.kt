@@ -445,67 +445,7 @@ class PoemActivity : AppCompatActivity() {
 
 
         ////////////////////////////////////////////////////////////////////////////////////
-/*
-        val channelid = "newUploads"
-        val mBuilder = NotificationCompat.Builder(this)
-                .setSmallIcon(R.mipmap.journal)
-                .setContentTitle("New Uploads")
-                .setContentText("New Poems Have Been Uploaded")
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                .setChannelId(channelid)
 
-
-        var notificationManager = NotificationManagerCompat.from(this)
-        // notificationId is a unique int for each notification that you must define
-        notificationManager.notify(1, mBuilder.build())
-
-        fun addUserIDToDatabase(){
-            val userID = FirebaseAuth.getInstance().uid
-            val emails = mAuth.currentUser!!.email.toString()
-            mDatabase.child(emails.replace(".","")).child("userID").setValue(userID)
-        }
-
-
-        var test = true
-        val userQuery: Query = mDatabase.child(mAuth.currentUser!!.email.toString().replace(".",""))
-
-        userQuery.addListenerForSingleValueEvent(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                // Goes through each item in this part of the database to determine is the user exists
-
-                for (singleSnapshot in dataSnapshot.children) {
-                    val user = singleSnapshot.value.toString()
-
-                    println(user)
-                }
-
-                //if (!test || userQuery == null){
-                //   addUserIDToDatabase()
-                //    println("JUST ADDED")
-                //}else{
-                //    println("it's already in the database!!!!!")
-               // }
-                println(test)
-                println(userQuery)
-
-                //println(FirebaseAuth.getInstance().uid.toString())
-
-            }
-
-            override fun onCancelled(databaseError: DatabaseError) {
-                Log.e("Server Response", "onCancelled", databaseError.toException())
-            }
-        })
-
-
-
-        //println(count)
-
-
-        //addUserIDToDatabase()
-
-
-*/
     }
 
 }
