@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/universalbackground"
+    tools:context=".PoemActivity">
+
+    <ImageView
+        android:id="@+id/signOutImageView"
+        android:layout_width="29dp"
+        android:layout_height="26dp"
+        android:layout_alignEnd="@+id/poemRecyclerView"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="13dp"
+        app:srcCompat="@drawable/signout" />
+
+    <ImageView
+        android:id="@+id/backImageView"
+        android:layout_width="34dp"
+        android:layout_height="26dp"
+        android:layout_alignStart="@+id/poemRecyclerView"
+        android:layout_alignTop="@+id/signOutImageView"
+        app:srcCompat="@drawable/backarrow" />
+
+    <RadioGroup
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="84dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/poemsRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="1"
+            android:text="Poems"
+            android:textColor="#32376e"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/haikusRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="2"
+            android:text="Haikus"
+            android:textColor="#32376e"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/quotesRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="3"
+            android:text="Quotes"
+            android:textAllCaps="false"
+            android:textColor="#32376e"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="318dp"
+        android:layout_height="42dp"
+        android:layout_alignBottom="@+id/poemRecyclerView"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Type Author's Name Here"
+        android:inputType="textMultiLine"
+        android:textColor="@android:color/black"
+        android:textColorHint="#24a8ee"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="318dp"
+        android:layout_height="42dp"
+        android:layout_alignTop="@+id/poemRecyclerView"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Type Title Here"
+        android:inputType="textMultiLine"
+        android:textColor="@android:color/black"
+        android:textColorHint="#24a8ee"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/poemEditText"
+        android:layout_width="318dp"
+        android:layout_height="368dp"
+        android:layout_above="@+id/nameEditText"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Type Content Here: Please only upload content that is your own or provide a valid link to this content that you wish to be displayed at the end."
+        android:inputType="textMultiLine"
+        android:padding="20dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="#24a8ee"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/preuploadButton"
+        style="@android:style/Widget.Button.Inset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp"
+        android:text="Upload?"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/uploadButton"
+        style="@android:style/Widget.Button.Inset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/preuploadButton"
+        android:layout_centerHorizontal="true"
+        android:text="Upload!!!"
+        android:visibility="invisible" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/poemRecyclerView"
+        android:layout_width="346dp"
+        android:layout_height="452dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@android:color/background_light"
+        android:visibility="visible">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/haikuRecyclerView"
+        android:layout_width="346dp"
+        android:layout_height="452dp"
+        android:layout_alignBottom="@+id/nameEditText"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/background_light"
+        android:visibility="visible">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/quoteRecyclerView"
+        android:layout_width="346dp"
+        android:layout_height="452dp"
+        android:layout_alignBottom="@+id/nameEditText"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/background_light"
+        android:visibility="visible" />
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/universalbackground">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:layout_marginTop="48dp"
+        android:alpha="0.8"
+        app:cardBackgroundColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_weight="0"
+                android:background="#0d0d0d"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="#FFF" />
+
+            <TextView
+                android:id="@+id/poemTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:alpha="1"
+                android:background="#555555"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="#FFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/poembyTextView"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:background="#0d0d0d"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="#FFF" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

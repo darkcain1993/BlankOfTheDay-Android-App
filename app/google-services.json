@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "962303488315",
+    "firebase_url": "https://blank-of-the-day.firebaseio.com",
+    "project_id": "blank-of-the-day",
+    "storage_bucket": "blank-of-the-day.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962303488315:android:33d0634c1e86d2c2",
+        "android_client_info": {
+          "package_name": "com.brown.dnarial.blankoftheday"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "962303488315-l5ddpds0shk0lnc9ojneohv6lhrkfes6.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "962303488315-l5ddpds0shk0lnc9ojneohv6lhrkfes6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxI9Fed-x57DtC9xpCJMoMLxsFcXWPNiA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
